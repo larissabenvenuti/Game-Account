@@ -14,16 +14,16 @@ public class User {
     private String name;
 
     @OneToOne(cascade = CascadeType.ALL)
-    private Account account;
+    private GameAccount gameAccount;
 
     @OneToOne(cascade = CascadeType.ALL)
-    private Card card;
+    private GameCard card;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private List<Feature> features;
+    private List<GameFeature> features;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private List<News> news;
+    private List<GameNews> news;
 
     public Long getId() {
         return id;
@@ -41,35 +41,35 @@ public class User {
         this.name = name;
     }
 
-    public Account getAccount() {
-        return account;
+    public GameAccount getGameAccount() {
+        return gameAccount;
     }
 
-    public void setAccount(Account account) {
-        this.account = account;
+    public void setGameAccount(GameAccount gameAccount) {
+        this.gameAccount = gameAccount;
     }
 
-    public Card getCard() {
+    public GameCard getCard() {
         return card;
     }
 
-    public void setCard(Card card) {
+    public void setCard(GameCard card) {
         this.card = card;
     }
 
-    public List<Feature> getFeatures() {
+    public List<GameFeature> getFeatures() {
         return features;
     }
 
-    public void setFeatures(List<Feature> features) {
+    public void setFeatures(List<GameFeature> features) {
         this.features = features;
     }
 
-    public List<News> getNews() {
+    public List<GameNews> getNews() {
         return news;
     }
 
-    public void setNews(List<News> news) {
+    public void setNews(List<GameNews> news) {
         this.news = news;
     }
 
