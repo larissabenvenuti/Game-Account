@@ -61,5 +61,7 @@ public class GameAccount {
     public void setCredits(BigDecimal credits) {
         this.credits = credits;
     }
-
+    public String getNumber() {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
 }

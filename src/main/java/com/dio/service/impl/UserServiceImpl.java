@@ -23,8 +23,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User create(User userToCreate) {
-        if (userRepository.existsByGameAccountUsername(userToCreate.getGameAccount().getUsername())) {
-            throw new IllegalArgumentException("This username already exists.");
+        if (userRepository.existsByAccountNumber(userToCreate.getGameAccount().getNumber())) {
+            throw new IllegalArgumentException("This Account number already exists.");
         }
         return userRepository.save(userToCreate);
     }
